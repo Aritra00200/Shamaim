@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import styled from "styled-components";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useProductContext } from "./context/productcontex";
 import PageNavigation from "./components/PageNavigation";
 import MyImage from "./components/MyImage";
@@ -15,6 +15,13 @@ import GoToTop from './components/GoToTop';
 const API = "http://127.0.0.1:8000/products/music-and-band";
 
 const SingleProduct = () => {
+  const history = useNavigate();
+
+  const handleBuyNow = () => {
+    localStorage.setItem("orderData", JSON.stringify(singleProduct));
+   
+  }
+
   const { getSingleProduct, isSingleLoading, singleProduct } =
     useProductContext();
 
@@ -106,6 +113,7 @@ const SingleProduct = () => {
                 </div>
                 <hr />
                 {stock > 0 && <AddToCart product={singleProduct} />}
+                <button className="btn" style={{marginLeft: "20px"}} onClick={handleBuyNow}>Buy Now</button>
               </div>
             </div>
           </Container>

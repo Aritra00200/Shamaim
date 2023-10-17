@@ -1,0 +1,28 @@
+.order h1{
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+}
+.order-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.order-details img{
+    width: 70px;
+    height: 70px;
+}
+.order-details-name{
+    font-size: 20px;
+    font-weight: bold;
+}
+.order-details button{
+    padding: 9px;
+    border: none;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 50px;
+    color: white;
+    background-color: red;
+}
