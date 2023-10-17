@@ -1,6 +1,6 @@
 .aboutImg {
   margin: auto;
-  width: 50%;
+  width: 100%;
   padding: 10px;
 }
 .about {
@@ -10,6 +10,11 @@
   margin-bottom: 10px;
   width: 700px;
   height: 500px;
+}
+.about-banner{
+  width: 100%;
+  /* margin-left: 300px; */
+  margin-bottom: 10px;
 }
 
 /* Mobile-responsive styles */
